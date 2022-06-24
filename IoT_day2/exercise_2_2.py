@@ -116,7 +116,7 @@ def controlLed(keyData):
         return -1
     global status
 
-    if keyData>4:
+    if keyData not in [1,2,3,4]:
         for i in range(1, 5):
             GPIO.output(led[i], GPIO.LOW)
             status[i] = GPIO.LOW
